@@ -1,8 +1,8 @@
 <h1>My Contacts</h1>
 
-<ul class="contacts">
+<ul class="contacts list-group">
   <% @contacts.each do |contact| %>
-    <li class="contact">
+    <li class="contact list-group-item">
       <a href="/contacts/<%= contact.id %>">
         <%= contact.first_name %> <%= contact.last_name %>
       </a>
