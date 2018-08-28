@@ -23,6 +23,7 @@ class Contact
 
   def self.clear()
     @@contacts = []
+    @@next_id = 1
   end
 
   def save()

@@ -43,4 +43,15 @@ describe 'the contact path', :type => :feature do
     expect(page).to have_css('li.contact', :text => 'Mike')
     expect(page).to have_css('li.contact', :text => 'Smith')
   end
+
+  it 'will show a detailed view of a contact when it is clicked on' do
+    fill_in :first_name, :with => 'John'
+    fill_in :last_name, :with => 'Doe'
+    fill_in :job_title, :with => 'Manager'
+    fill_in :company, :with => 'ACME Inc'
+    fill_in :contact_type, :with => 'Business'
+    click_button 'Add'
+    click_link 'John Doe'
+    expect(page).to have_content('Job Title')
+  end
 end
