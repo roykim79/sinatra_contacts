@@ -2,11 +2,11 @@
 
 <ul class="contacts">
   <% @contacts.each do |contact| %>
-    <li class="contact"><%= contact.first_name %> <%= contact/last_name %></li>
+    <li class="contact"><%= contact.first_name %> <%= contact.last_name %></li>
   <% end %>
 </ul>
 
-<form class="" action="/" method="post">
+<form action="/" method="post">
   <div class="form-group">
     <label for="first_name">First Name</label>
     <input class="form-control" type="text" name="first_name">
@@ -27,4 +27,5 @@
     <label for="contact_type">Contact Type</label>
     <input class="form-control" type="text" name="contact_type">
   </div>
+  <button class="btn btn-primary" type="submit" name="button">Add</button>
 </form>

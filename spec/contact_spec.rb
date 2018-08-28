@@ -4,6 +4,7 @@ require 'contact'
 
 describe Contact do
   before :each do
+    Contact.clear()
     @contact = Contact.new({
       :first_name => 'John',
       :last_name => 'Doe',
