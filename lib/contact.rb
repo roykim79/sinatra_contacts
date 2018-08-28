@@ -1,4 +1,6 @@
 class Contact
+  @@contacts = []
+
   attr_accessor :first_name, :last_name, :job_title, :company, :contact_type
 
   def initialize(attributes)
@@ -7,5 +9,9 @@ class Contact
     @job_title = attributes.fetch(:job_title)
     @company = attributes.fetch(:company)
     @contact_type = attributes.fetch(:contact_type)
+  end
+
+  def self.all
+    @@contacts
   end
 end

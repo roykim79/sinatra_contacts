@@ -57,4 +57,11 @@ describe Contact do
       expect(@contact.contact_type()).to eq('personal')
     end
   end
+
+  describe '.all' do
+    it 'is empty at first' do
+      expect(Contact.all()).to eq([])
+    end
+  end
+
 end
