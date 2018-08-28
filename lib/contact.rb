@@ -19,5 +19,6 @@ class Contact
 
   def save()
     @@contacts.push(self)
+    @@next_id += 1
   end
 end

@@ -74,6 +74,17 @@ describe Contact do
       expect(Contact.all()).to eq([@contact])
     end
 
+    it 'increments the next_id' do
+      @contact.save()
+      contact2 = Contact.new({
+        :first_name => 'John',
+        :last_name => 'Doe',
+        :job_title => 'Manager',
+        :company => 'ACME Inc',
+        :contact_type => 'business'
+      })
+      expect(contact2.id()).to eq(@contact.id() + 1)
+    end
   end
 
   describe '.find' do
