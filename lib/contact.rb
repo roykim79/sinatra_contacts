@@ -21,6 +21,10 @@ class Contact
     @@contacts.find {|contact| contact.id() == id}
   end
 
+  def self.clear()
+    @@contacts = []
+  end
+
   def save()
     @@contacts.push(self)
     @@next_id += 1

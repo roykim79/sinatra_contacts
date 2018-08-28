@@ -103,4 +103,12 @@ describe Contact do
     end
   end
 
+  describe '.clear' do
+    it 'empties the contacts list' do
+      @contact.save()
+      Contact.clear()
+      expect(Contact.all()).to eq([])
+    end
+  end
+
 end
