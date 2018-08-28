@@ -11,7 +11,11 @@ class Contact
     @contact_type = attributes.fetch(:contact_type)
   end
 
-  def self.all
+  def self.all()
     @@contacts
+  end
+
+  def save()
+    @@contacts.push(self)
   end
 end

@@ -64,4 +64,11 @@ describe Contact do
     end
   end
 
+  describe '#save' do
+    it 'adds the new contact to the contacts list' do
+      @contact.save()
+      expect(Contact.all()).to eq([@contact])
+    end
+  end
+
 end
