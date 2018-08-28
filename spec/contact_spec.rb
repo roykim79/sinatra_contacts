@@ -22,7 +22,7 @@ describe Contact do
       expect(@contact.contact_type()).to eq('business')
     end
 
-    it 'add an id to each new contact' do
+    it 'adds an id to each new contact' do
       expect(@contact.id()).to be > 0
     end
   end
@@ -89,7 +89,17 @@ describe Contact do
 
   describe '.find' do
     it 'returns the contact with the matching id parameter' do
-
+      @contact.save()
+      contact2 = Contact.new({
+        :first_name => 'John',
+        :last_name => 'Doe',
+        :job_title => 'Manager',
+        :company => 'ACME Inc',
+        :contact_type => 'business'
+      })
+      contact2.save()
+      expect(Contact.find(@contact.id())).to eq (@contact)
+      expect(Contact.find(contact2.id())).to eq (contact2)
     end
   end
 
