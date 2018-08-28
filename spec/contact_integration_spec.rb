@@ -21,7 +21,7 @@ describe 'the contact path', :type => :feature do
     fill_in :company, :with => 'ACME Inc'
     fill_in :contact_type, :with => 'Business'
     click_button 'Add'
-    # expect(page).to have_css('li.contact', :text => 'John')
+    expect(page).to have_css('li.contact', :text => 'John')
     expect(page).to have_css('li.contact', :text => 'Doe')
   end
 end
