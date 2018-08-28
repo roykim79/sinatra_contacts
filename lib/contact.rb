@@ -1,7 +1,8 @@
 class Contact
   @@contacts = []
+  @@next_id = 1
 
-  attr_accessor :first_name, :last_name, :job_title, :company, :contact_type
+  attr_accessor :first_name, :last_name, :job_title, :company, :contact_type, :id
 
   def initialize(attributes)
     @first_name = attributes.fetch(:first_name)
@@ -9,6 +10,7 @@ class Contact
     @job_title = attributes.fetch(:job_title)
     @company = attributes.fetch(:company)
     @contact_type = attributes.fetch(:contact_type)
+    @id = @@next_id
   end
 
   def self.all()

@@ -21,6 +21,10 @@ describe Contact do
       expect(@contact.company()).to eq('ACME Inc')
       expect(@contact.contact_type()).to eq('business')
     end
+
+    it 'add an id to each new contact' do
+      expect(@contact.id()).to be > 0
+    end
   end
 
   describe '#first_name=' do
@@ -68,6 +72,13 @@ describe Contact do
     it 'adds the new contact to the contacts list' do
       @contact.save()
       expect(Contact.all()).to eq([@contact])
+    end
+
+  end
+
+  describe '.find' do
+    it 'returns the contact with the matching id parameter' do
+
     end
   end
 
