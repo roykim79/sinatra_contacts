@@ -52,4 +52,12 @@ describe 'the contact path', :type => :feature do
     expect(page).to have_css('ul.contacts', :count => 1)
     expect(page).to have_css('form', :count => 1)
   end
+
+  it 'will have a form where the user can add an address to a contact' do
+    click_button 'Add'
+    click_link 'John Doe'
+    expect(page).to have_selector('form')
+    expect(page).to have_css('input#address')
+    expect(page).to have_css('input#first_name')
+  end
 end

@@ -1,18 +1,40 @@
-<a href="/">Back to contacts</a>
-<ul class="list-group">
-  <li class="list-group-item">
-    <strong>First Name:</strong> <%= @contact.first_name %>
-  </li>
-  <li class="list-group-item">
-    <strong>Last Name:</strong> <%= @contact.last_name %>
-  </li>
-  <li class="list-group-item">
-    <strong>Job Title:</strong> <%= @contact.job_title %>
-  </li>
-  <li class="list-group-item">
-    <strong>Company:</strong> <%= @contact.company %>
-  </li>
-  <li class="list-group-item">
-    <strong>Contact Type:</strong> <%= @contact.contact_type %>
-  </li>
-</ul>
+<a href="/contacts">Back to contacts</a>
+
+<form class="" action="/" method="post">
+  <div class="form-group">
+    <label for="first_name">First Name</label>
+    <input id="first_name" class="form-control" type="text" name="first_name" value="<%= @contact.first_name %>">
+  </div>
+  <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <input id="last_name" class="form-control" type="text" name="last_name" value="<%= @contact.last_name %>">
+  </div>
+  <div class="form-group">
+    <label for="job_title">Job Title</label>
+    <input id="job_title" class="form-control" type="text" name="last_name" value="<%= @contact.job_title %>">
+  </div>
+  <div class="form-group">
+    <label for="company">Company</label>
+    <input id="company" class="form-control" type="text" name="company" value="<%= @contact.company %>">
+  </div>
+  <div class="form-group">
+    <label for="contact_type">Contact Type</label>
+    <input id="contact_type" class="form-control" type="text" name="contact_type" value="<%= @contact.contact_type %>">
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input id="address" class="form-control" type="text" name="address" value="<%= @contact.address %>">
+  </div>
+  <div class="form-group">
+    <label for="city">City</label>
+    <input id="city" class="form-control" type="text" name="city" value="<%= @contact.city %>">
+  </div>
+  <div class="form-group">
+    <label for="state">State</label>
+    <input id="state" class="form-control" type="text" name="state" value="<%= @contact.state %>">
+  </div>
+  <div class="form-group">
+    <label for="zipcode">Zipcode</label>
+    <input id="zipcode" class="form-control" type="text" name="zipcode" value="<%= @contact.zipcode %>">
+  </div>
+</form>

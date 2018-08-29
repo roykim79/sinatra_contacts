@@ -10,7 +10,12 @@ get '/' do
   erb(:contacts)
 end
 
-post '/' do
+get '/contacts' do
+  @contacts = Contact.all()
+  erb(:contacts)
+end
+
+post '/contacts' do
   contact = Contact.new({
     :first_name => params.fetch('first_name'),
     :last_name => params.fetch('last_name'),
