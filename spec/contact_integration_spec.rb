@@ -66,4 +66,14 @@ describe 'the contact path', :type => :feature do
     click_link 'John Doe'
     expect(page).to have_selector('button')
   end
+
+  it 'will save changes from contact_details view when the user saves changes' do
+    click_button 'Add'
+    click_link 'John Doe'
+    fill_in :address, :with => '123 Main St'
+    click_button 'Save changes'
+    click_link 'Back to contacts'
+    click_link 'John Doe'
+    expect(page).to have_selector("input[value='123 Main St']")
+  end
 end

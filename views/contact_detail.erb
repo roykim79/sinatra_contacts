@@ -1,6 +1,6 @@
 <a href="/contacts">Back to contacts</a>
 
-<form class="" action="/" method="post">
+<form class="" action="/contacts/<%= @contact.id %>" method="post">
   <div class="form-group">
     <label for="first_name">First Name</label>
     <input id="first_name" class="form-control" type="text" name="first_name" value="<%= @contact.first_name %>">
@@ -11,7 +11,7 @@
   </div>
   <div class="form-group">
     <label for="job_title">Job Title</label>
-    <input id="job_title" class="form-control" type="text" name="last_name" value="<%= @contact.job_title %>">
+    <input id="job_title" class="form-control" type="text" name="job_title" value="<%= @contact.job_title %>">
   </div>
   <div class="form-group">
     <label for="company">Company</label>
