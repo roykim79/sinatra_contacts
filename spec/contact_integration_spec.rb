@@ -60,4 +60,10 @@ describe 'the contact path', :type => :feature do
     expect(page).to have_css('input#address')
     expect(page).to have_css('input#first_name')
   end
+
+  it 'will have a submit button on the contact_detail view where a user can submit changes' do
+    click_button 'Add'
+    click_link 'John Doe'
+    expect(page).to have_selector('button')
+  end
 end
